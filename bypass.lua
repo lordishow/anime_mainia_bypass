@@ -1,7 +1,8 @@
 local loaded = getgenv().lord_anime_mainia_bypass_loaded
 
 if loaded then 
-	return
+    print("bypass already loaded")
+    return
 end
 getgenv().lord_anime_mainia_bypass_loaded = true
 
@@ -57,3 +58,5 @@ oldNamecallKick = hookmetamethod(game, "__namecall", newcclosure(function(self, 
 end))
 
 setreadonly(mt, true)
+
+print("bypass loaded successfully")
